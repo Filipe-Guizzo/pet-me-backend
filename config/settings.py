@@ -127,14 +127,14 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-MEDIA_URL = '/media/'
+MEDIA_URL = '/pet-me/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'pet-me/media/')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'dnn3dk829',
-    'API_KEY': '967384648423155',
-    'API_SECRET': 'eFv8t31S2vcs3ODoefNiU0SfhNc'
+    'CLOUD_NAME': os.environ['CLOUD_NAME'],
+    'API_KEY': os.environ['API_KEY'],
+    'API_SECRET': os.environ['API_SECRET']
 }
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
