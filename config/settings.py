@@ -25,7 +25,9 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'cloudinary_storage',
     'django.contrib.staticfiles',
+    'cloudinary',
     'corsheaders',
     'adocao',
     'animal',
@@ -127,7 +129,15 @@ STATIC_URL = 'static/'
 
 MEDIA_URL = '/media/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'pet-me/media/')
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'dnn3dk829',
+    'API_KEY': '967384648423155',
+    'API_SECRET': 'eFv8t31S2vcs3ODoefNiU0SfhNc'
+}
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
